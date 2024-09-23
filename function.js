@@ -1,25 +1,52 @@
-/*
-function: block of reusable code.
-syntax:
-function 'function_Name'()
+// simple example:
+
+// call function anywhere Js
+greet()
+function greet()
 {
-code to execute
-return result
+    console.log("Namaste")
 }
-*/
-// reusable code:.
+// general function call
+greet()
 
 
-function sum(a,b) //function declaration
+// dynamic:
+function add(num1, num2)
 {
-    console.log(a+b); //function body 
-    // return a+b;
+    return num1 + num2;
 }
-sum(12,4)//function call
+console.log(add(12,34));
 
-console.log("\nfunction expression")
-let result = function sum(a,b)
-{
-    return a+b;
+
+// arrow function:
+
+// method 1;
+var newAd = function(a,b) {
+    console.log("Arrow method")
+    console.log(a+b);
 }
-console.log(result(23,5));
+newAd(34,2)
+
+// method 2:
+let multiply = (c,d) => {
+    console.log("Mehtod 2");
+    return c + d;
+}
+console.log(multiply(11,2))
+
+
+// m3:
+var square = (x) => x*x;
+console.log(square(3))
+
+// spread operator;
+function spreadCopy(...nums)    //unknow an=bout the number of argumnet
+{
+var sum = 0;
+for (var i =0;i<nums.length;i++)
+{
+    sum = sum + nums[i];
+}
+return sum;
+}
+console.log("\nSpread Operator functionality:"+spreadCopy(1,5,7,34))
